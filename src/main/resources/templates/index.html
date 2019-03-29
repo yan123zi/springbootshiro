@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>Index</h2>
+    Welcome:<shiro:principal/>
+    <br>
+    <a href="/shiro/logout">LogOut</a>
+    <br><br>
+    <shiro:hasRole name="user">
+    <a href="/user/userPage">User Page</a>
+    </shiro:hasRole>
+    <br><br>
+    <shiro:hasRole name="admin">
+    <a href="/user/adminPage">Admin Page</a>
+    </shiro:hasRole>
+</body>
+</html>
